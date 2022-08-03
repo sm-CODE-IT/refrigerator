@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
-}
+/* Login Component */
+.login_wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  background-color: rgb(220, 253, 242);
+  padding: 50px;
+  border-radius: 10px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.login_wrapper label {
+  padding: 2px;
+  font-size: 15pt;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login_wrapper input {
+  margin: 5px 0px 20px 0px;
+}
+
+.login_wrapper button {
+  padding: 5px;
+  width: 90%;
+  margin-left: 5%;
+
+  background-color: aquamarine;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 15pt;
 }
