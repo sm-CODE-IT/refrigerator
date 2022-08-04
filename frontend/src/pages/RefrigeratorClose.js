@@ -11,7 +11,7 @@ const RefrigeratorClose = () => {
     }
 
     return (
-        <div>
+        <div className="closePage">
             <div className="img_close">
                 <img src={process.env.PUBLIC_URL + `assets/close_refrigerator.png`} />
             </div>
