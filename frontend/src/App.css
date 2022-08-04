@@ -1,0 +1,36 @@
+/* Login Component */
+.login_wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: rgb(220, 253, 242);
+  padding: 50px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+}
+
+.login_wrapper label {
+  padding: 2px;
+  font-size: 15pt;
+}
+
+.login_wrapper input {
+  margin: 5px 0px 20px 0px;
+}
+
+.login_wrapper button {
+  padding: 5px;
+  width: 90%;
+  margin-left: 5%;
+
+  background-color: aquamarine;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 15pt;
+}
