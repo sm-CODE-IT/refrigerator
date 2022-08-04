@@ -3,8 +3,6 @@
 body{
   background-color: #f6f6f6;
   display: flex;
-  justify-content:center;
-  align-items: center;
   font-family: "Gowun Dodum"; /*기본 폰트 설정*/
   min-height: 100vh;
   margin: 0px;
@@ -49,6 +47,7 @@ body{
   font-size: 15pt;
   font-weight: bold;
 
+
   cursor: pointer;
 }
 
@@ -61,7 +60,7 @@ body{
   top: 15%;
 
   display: flex;
-  align-items: center;
+  vertical-align: middle;
 }
 
 
@@ -90,6 +89,11 @@ body{
 
 
 .img_open img {
+  position: absolute;
+  left: 30%;
+  top: 15%;
+
+  display: flex;
   height: 70vh;
 }
 
@@ -97,13 +101,13 @@ body{
 
 .header {
   position: absolute;
-  left: 50%;
   top: 10%;
   margin-bottom: 20px;
   display: flex;
 }
 
 .header_refrigerator {
+  width:20vw;
   font-family: "Gowun Dodum";
   background-color: aquamarine;
   cursor: pointer;
@@ -116,6 +120,7 @@ body{
 }
 
 .header_Community {
+  width:20vw;
   font-family: "Gowun Dodum";
   background-color:rgb(220, 253, 242);;
   cursor: pointer;
@@ -128,6 +133,8 @@ body{
 }
 
 .header_Mypage {
+
+  width:20vw;
   font-family: "Gowun Dodum";
   background-color: aquamarine;
   cursor: pointer;
@@ -140,13 +147,16 @@ body{
 }
 
 .header_userinfo {
+
+  width:40vw;
+
   font-family: "Gowun Dodum";
   background-color:rgb(220, 253, 242);
 
-  border: none;
   border-radius: 10px;
 
   font-size: 15pt;
   font-weight: bold;
   
+  text-align: center;
 }

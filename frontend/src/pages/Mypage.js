@@ -1,6 +1,11 @@
+import Navigator from "../util/Navigate";
 const Mypage = () => {
     return (
-        <h4>마이페이지입니다.</h4>
+        
+      <><header>
+            <Navigator />
+        </header>
+        <h4>마이페이지입니다.</h4></>
     );
 };
 

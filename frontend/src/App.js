@@ -5,7 +5,6 @@ import Community from './pages/Community';
 import Mypage from './pages/Mypage';
 import RefrigeratorClose from './pages/RefrigeratorClose';
 import RefrigeratorOpen from './pages/RefrigeratorOpen';
-import Navigator from './util/Navigate';
 
 
 function App() {
@@ -13,9 +12,6 @@ function App() {
   return (
     
     <BrowserRouter>
-      <header>
-        <Navigator />
-      </header>
         <div className="App">
           <Routes>
             <Route path='/' element={<Login />} />
