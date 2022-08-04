@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+body{
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  font-family: "Gowun Dodum"; /*기본 폰트 설정*/
+  min-height: 100vh;
+  margin: 0px;
+}
+
+
 /* Login Component */
 .login_wrapper {
   position: absolute;
@@ -32,5 +45,50 @@
   border: none;
   border-radius: 10px;
 
+  font-family: "Gowun Dodum";
   font-size: 15pt;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+/* Pages/RefrigeratorOpen */
+
+.closePage {
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  display: flex;
+  align-items: center;
+}
+
+
+.img_close img {
+  height: 80vh;
+}
+
+.startBtn {
+  width: 200px;
+  height: 60px;
+  margin: auto;
+  display: block;
+
+  background-color: aquamarine;
+
+  border: none;
+  border-radius: 10px;
+
+  text-align: center;
+  font-family: "Gowun Dodum";
+  font-size: 15pt;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+.img_open img {
+  height: 80vh;
 }
