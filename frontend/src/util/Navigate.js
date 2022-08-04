@@ -13,7 +13,7 @@ const Navigator =() => {
         navigate(`/mypage`);
     }
 
-    return <div>
+    return <div className="header">
         <div className="head_btn_left">
         <button className="header_refrigerator" onClick={goOpen}>
           냉장고
@@ -29,8 +29,8 @@ const Navigator =() => {
           마이페이지
         </button>
       </div>
-      <div className="head_userinfo">
-        환영합니다.
+      <div className="header_userinfo">
+        000님 환영합니다.
       </div>
     </div>
 };

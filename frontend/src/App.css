@@ -58,7 +58,7 @@ body{
 
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 15%;
 
   display: flex;
   align-items: center;
@@ -66,7 +66,7 @@ body{
 
 
 .img_close img {
-  height: 80vh;
+  height: 50vh;
 }
 
 .startBtn {
@@ -90,5 +90,63 @@ body{
 
 
 .img_open img {
-  height: 80vh;
+  height: 70vh;
+}
+
+/* navigate */
+
+.header {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.header_refrigerator {
+  font-family: "Gowun Dodum";
+  background-color: aquamarine;
+  cursor: pointer;
+  
+  border: none;
+  border-radius: 10px;
+
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+.header_Community {
+  font-family: "Gowun Dodum";
+  background-color:rgb(220, 253, 242);;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+.header_Mypage {
+  font-family: "Gowun Dodum";
+  background-color: aquamarine;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+.header_userinfo {
+  font-family: "Gowun Dodum";
+  background-color:rgb(220, 253, 242);
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 15pt;
+  font-weight: bold;
+  
 }
