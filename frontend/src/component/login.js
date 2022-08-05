@@ -40,6 +40,9 @@ const Login = () => {
                 <br />
                 <button>로그인</button>
             </form>
+            <section>
+                <h4>회원가입</h4>
+            </section>
         </div>
     );
 };

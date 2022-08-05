@@ -8,21 +8,23 @@ import RefrigeratorOpen from './pages/RefrigeratorOpen';
 
 
 function App() {
-  
+
+  const [data, dispatch] = useReducer(reducer, []);
+
   return (
-    
+
     <BrowserRouter>
-        <div className="App">
-          <Routes>
-            <Route path='/' element={<Login />} />
-            <Route path='/close' element={<RefrigeratorClose />} />
-            <Route path='/open' element={<RefrigeratorOpen />} />
-            <Route path='/community' element={<Community />} />
-            <Route path='/mypage' element={<Mypage />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
-    
+      <div className="App">
+        <Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/close' element={<RefrigeratorClose />} />
+          <Route path='/open' element={<RefrigeratorOpen />} />
+          <Route path='/community' element={<Community />} />
+          <Route path='/mypage' element={<Mypage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+
   );
 }
 
