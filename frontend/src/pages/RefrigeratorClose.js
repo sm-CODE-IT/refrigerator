@@ -1,4 +1,4 @@
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navigator from "../util/Navigate";
 
 const RefrigeratorClose = () => {
@@ -8,15 +8,16 @@ const RefrigeratorClose = () => {
     env.PUBLIC_URL = env.PUBLIC_URL || "";
 
     const goOpen = () => {
-        navigate(`/open`)
+        navigate(`/open`, { replace: true });
+
     }
 
     return (
-        
-      <><header>
+
+        <><header>
             <Navigator />
         </header>
-        <div className="closePage">
+            <div className="closePage">
                 <div className="img_close">
                     <img src={process.env.PUBLIC_URL + `assets/close_refrigerator.png`} />
                 </div>
@@ -24,6 +25,6 @@ const RefrigeratorClose = () => {
                     시작하기
                 </button>
             </div></>
-    );  
+    );
 };
 export default RefrigeratorClose;

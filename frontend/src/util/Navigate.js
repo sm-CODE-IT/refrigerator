@@ -1,20 +1,21 @@
 import { useNavigate } from "react-router-dom";
 
-const Navigator =() => {
-    const navigate = useNavigate();
-    const goOpen = () => {
-        navigate(`/open`);
-    }
-    const goCommunity = () => {
-        navigate(`/community`);
-    }
+const Navigator = () => {
+  const navigate = useNavigate();
+  const goOpen = () => {
+    navigate(`/open`);
+  }
+  const goCommunity = () => {
+    navigate(`/community`);
+  }
 
-    const goMypage = () => {
-        navigate(`/mypage`);
-    }
+  const goMypage = () => {
+    navigate(`/mypage`);
+  }
 
-    return <div className="header">
-        <div className="head_btn_left">
+  return (
+    <div className="header">
+      <div className="head_btn_left">
         <button className="header_refrigerator" onClick={goOpen}>
           냉장고
         </button>
@@ -33,6 +34,7 @@ const Navigator =() => {
         000님 환영합니다.
       </div>
     </div>
+  );
 };
 
 export default Navigator;

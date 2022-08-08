@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
-body{
+body {
   background-color: #f6f6f6;
   display: flex;
-  font-family: "Gowun Dodum"; /*기본 폰트 설정*/
+  font-family: "Gowun Dodum";
+  /*기본 폰트 설정*/
   min-height: 100vh;
   margin: 0px;
 }
@@ -101,17 +102,18 @@ body{
 
 .header {
   position: absolute;
-  top: 10%;
+  top: 2%;
   margin-bottom: 20px;
   display: flex;
+
 }
 
 .header_refrigerator {
-  width:20vw;
+  width: 20vw;
   font-family: "Gowun Dodum";
   background-color: aquamarine;
   cursor: pointer;
-  
+
   border: none;
   border-radius: 10px;
 
@@ -120,9 +122,9 @@ body{
 }
 
 .header_Community {
-  width:20vw;
+  width: 20vw;
   font-family: "Gowun Dodum";
-  background-color:rgb(220, 253, 242);;
+  background-color: rgb(220, 253, 242);
   cursor: pointer;
 
   border: none;
@@ -134,7 +136,7 @@ body{
 
 .header_Mypage {
 
-  width:20vw;
+  width: 20vw;
   font-family: "Gowun Dodum";
   background-color: aquamarine;
   cursor: pointer;
@@ -148,15 +150,15 @@ body{
 
 .header_userinfo {
 
-  width:40vw;
+  width: 40vw;
 
   font-family: "Gowun Dodum";
-  background-color:rgb(220, 253, 242);
+  background-color: rgb(220, 253, 242);
 
   border-radius: 10px;
 
   font-size: 15pt;
   font-weight: bold;
-  
+
   text-align: center;
 }
