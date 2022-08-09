@@ -1,5 +1,6 @@
 import axios from "axios";
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 //import {useDispatch} from "react-redux";
 
 const Login = () => {
@@ -13,6 +14,8 @@ const Login = () => {
     const [id, setId] = useState("");
     const [password, setPassword] = useState("");
 
+    const navigate = useNavigate();
+
     const onIdHandler = (e) => {
         setId(e.currentTarget.value);
     }
@@ -25,11 +28,18 @@ const Login = () => {
         e.preventDefault();
     }
 
+    const goClose = () => {
+        navigate(`/close`);
+    }
+    const goJoin = () => {
+        navigate(``)
+    }
+
     // console.log(id);
     // console.log(password);
 
     return (
-        
+
         <div className="login_wrapper">
             <form onSubmit={onSubmitHandler}>
                 <label>아이디</label><br />
@@ -38,9 +48,12 @@ const Login = () => {
                 <label>비밀번호</label><br />
                 <input type="password" value={password} onChange={onPasswordHandler} />
                 <br />
-                <button>로그인</button>
+                <button onClick={goClose}>로그인</button>
             </form>
-        </div>
+            <div>
+                <div onClick={goJoin}>회원가입</div>
+            </div>
+        </div >
     );
 };
 
