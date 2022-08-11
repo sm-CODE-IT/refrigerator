@@ -11,7 +11,9 @@ const Editor = () => {
             <header>
                 <Navigator />
             </header>
+
             <div>
+                <h2>재료 추가하기</h2>
                 <section>
                     <h4>재료명</h4>
                     <form>
