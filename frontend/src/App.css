@@ -89,6 +89,10 @@ body {
   cursor: pointer;
 }
 
+.open_goEdit {
+  margin-top: 40px;
+}
+
 
 .img_open img {
   position: absolute;

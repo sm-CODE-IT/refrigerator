@@ -7,7 +7,8 @@ const RefrigeratorOpen = () => {
     const navigate = useNavigate();
 
     const goAdd = () => {
-        navigate(``)
+        navigate(`/edit`);
+
     }
 
 
@@ -21,7 +22,7 @@ const RefrigeratorOpen = () => {
                 <div className="img_open">
                     <img src={process.env.PUBLIC_URL + `assets/open_refrigerator.png`} />
                 </div>
-                <section>
+                <section className="open_goEdit">
                     <div onClick={goAdd}>재료 추가하기</div>
                     <div>재료 수정하기</div>
                 </section>
