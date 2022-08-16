@@ -167,3 +167,10 @@ body {
 
   text-align: center;
 }
+
+/*editor*/
+.editor_body {
+  position: absolute;
+  left: 10%;
+  top: 15%;
+}
