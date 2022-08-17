@@ -1,3 +1,4 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navigator from "../util/Navigate";
 const RefrigeratorOpen = () => {
@@ -7,7 +8,8 @@ const RefrigeratorOpen = () => {
     const navigate = useNavigate();
 
     const goAdd = () => {
-        navigate(``)
+        navigate(`/edit`);
+
     }
 
 
@@ -21,8 +23,8 @@ const RefrigeratorOpen = () => {
                 <div className="img_open">
                     <img src={process.env.PUBLIC_URL + `assets/open_refrigerator.png`} />
                 </div>
-                <section>
-                    <div onClick={goAdd}>재료 추가하기</div>
+                <section className="open_goEdit">
+                    <div onClick={goAdd} className="plus"><img src={process.env.PUBLIC_URL + `assets/plus.png`} /></div>
                     <div>재료 수정하기</div>
                 </section>
             </div>

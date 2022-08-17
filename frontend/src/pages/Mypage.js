@@ -1,3 +1,4 @@
+import React from "react";
 import Navigator from "../util/Navigate";
 const Mypage = () => {
     return (

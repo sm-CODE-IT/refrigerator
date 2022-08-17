@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Navigator from "../util/Navigate";
 
 const Editor = () => {
@@ -12,7 +12,7 @@ const Editor = () => {
                 <Navigator />
             </header>
 
-            <div>
+            <div className="editor_body">
                 <h2>재료 추가하기</h2>
                 <section>
                     <h4>재료명</h4>
