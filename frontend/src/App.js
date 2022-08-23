@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useRef } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './component/login';
@@ -8,10 +8,57 @@ import Mypage from './pages/Mypage';
 import RefrigeratorClose from './pages/RefrigeratorClose';
 import RefrigeratorOpen from './pages/RefrigeratorOpen';
 
+const reducer = (state, action) => { //모든 데이터 수정
+  let newState = [];
+  switch (action.type) {
+    case 'INIT': {
+      return action.data;
+    }
+    case 'CREATE': {
+      const newItem = {
+        ...action.data
+      };
+      newState = [newItem, ...state];
+      break;
+    }
+    case 'REMOVE': {
+      newState = state.filter((it) => it.id !== action.targetId);
+      break;
+    }
+    case "EDIT": {
+      newState = state.map((it) =>
+        (it.id === action.data.id) ? { ...action.data } : it
+      );
+      break;
+    }
+    default:
+      return state;
+  }
+  localStorage.setItem('ingredient', JSON.stringify(newState)); //로컬스토리지에  newState 저장
+  return newState;
+};
 
 function App() {
 
-  //const [data, dispatch] = useReducer(reducer, []);
+  const [data, dispatch] = useReducer(reducer, []);
+
+  const dataId = useRef(0);
+  const onCreate = (inName, date, amount) => {
+    dispatch({
+      type: "CREATE",
+      data: {
+        id: dataId.current,
+        inName,
+        date,
+        amount,
+      }
+    });
+    dataId.current++;
+  }
+
+  const onRemove = (targetId) => {
+    dispatch({ type: "REMOVE", targetId });
+  };
 
   return (
 

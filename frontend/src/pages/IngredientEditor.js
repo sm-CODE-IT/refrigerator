@@ -1,10 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
+import MyButton from "../component/MyButton";
 import Navigator from "../util/Navigate";
 
 const Editor = () => {
+    const contentRef = useRef();
+    const navigate = useNavigate();
     const [inName, setInName] = useState("");
     const [date, setDate] = useState("");
     const [amount, setAmount] = useState("");
+
+
+    const handleSubmit = () => {
+        if (inName.length < 1) {
+            contentRef.current.focus();
+            return;
+        }
+
+        if (amount < 1) {
+            contentRef.current.focus();
+            return;
+        }
+
+        if (window.confirm("새로운 재료를 추가하시겠습니까?")) {
+            onCreate(inName, date, amount);
+        }
+
+        navigate("/", { replace: true })
+    };
 
     return (
         <div>
@@ -47,6 +70,17 @@ const Editor = () => {
 
                 </section>
             </div>
+            <section>
+                <div className="control_box">
+                    <MyButton
+                        text={"최소하기"}
+                        onClick={() => Navigate(-1)} />
+                    <MyButton
+                        text={"작성완료"}
+                        type={"positive"}
+                        onClick={handleSubmit} />
+                </div>
+            </section>
         </div>
     )
 }
