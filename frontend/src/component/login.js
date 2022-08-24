@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import axios from "axios";
+import GoogleButton from "./GoogleButton";
 //import Alert from "react-native";
 //import {useDispatch} from "react-redux";
 
@@ -78,6 +79,7 @@ const Login = () => {
             <div>
                 <button className="joinbtn" onClick={goJoin}>회원가입</button>
             </div>
+            <GoogleButton />
         </div >
     );
 };
