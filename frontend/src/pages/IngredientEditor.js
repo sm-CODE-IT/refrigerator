@@ -1,7 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext} from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import MyButton from "../component/MyButton";
 import Navigator from "../util/Navigate";
+import { DiaryDispatchContext } from "./../App.js"
 
 const Editor = () => {
     const contentRef = useRef();
@@ -9,6 +10,7 @@ const Editor = () => {
     const [inName, setInName] = useState("");
     const [date, setDate] = useState("");
     const [amount, setAmount] = useState("");
+    const { onCreate, onRemove } = useContext(DiaryDispatchContext);
 
 
     const handleSubmit = () => {
@@ -69,19 +71,19 @@ const Editor = () => {
                     />
 
                 </section>
-                <button className="submitbtn" >저장</button>
+                <section>
+                    <div className="control_box">
+                        <MyButton
+                            text={"취소하기"}
+                            onClick={() => Navigate(-1)} />
+                        <MyButton
+                            text={"작성완료"}
+                            type={"positive"}
+                            onClick={handleSubmit} />
+                    </div>
+                </section>
             </div>
-            <section>
-                <div className="control_box">
-                    <MyButton
-                        text={"최소하기"}
-                        onClick={() => Navigate(-1)} />
-                    <MyButton
-                        text={"작성완료"}
-                        type={"positive"}
-                        onClick={handleSubmit} />
-                </div>
-            </section>
+            
         </div>
     )
 }
