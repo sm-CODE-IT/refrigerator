@@ -28,7 +28,7 @@ const Editor = () => {
             onCreate(inName, date, amount);
         }
 
-        navigate("/", { replace: true })
+        navigate("/open", { replace: true })
     };
 
     return (
