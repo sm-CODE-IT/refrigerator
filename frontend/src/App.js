@@ -9,6 +9,9 @@ import Mypage from './pages/Mypage';
 import RefrigeratorClose from './pages/RefrigeratorClose';
 import RefrigeratorOpen from './pages/RefrigeratorOpen';
 
+export const DiaryStateContext = React.createContext();
+export const DiaryDispatchContext = React.createContext();
+
 const reducer = (state, action) => { //모든 데이터 수정
   let newState = [];
   switch (action.type) {
@@ -55,27 +58,35 @@ function App() {
       }
     });
     dataId.current++;
-  }
+  };
 
   const onRemove = (targetId) => {
     dispatch({ type: "REMOVE", targetId });
   };
 
   return (
-
-    <BrowserRouter>
-      <div className="App">
-        <Routes>
-          <Route path='/' element={<Login />} />
-          <Route path='/close' element={<RefrigeratorClose />} />
-          <Route path='/open' element={<RefrigeratorOpen />} />
-          <Route path='/edit' element={<Editor />} />
-          <Route path='/community' element={<Community />} />
-          <Route path='/mypage' element={<Mypage />} />
-          <Route path='/join' element={<Join />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    < DiaryStateContext.Provider value={data}>
+      <DiaryDispatchContext.Provider
+        value={{
+          onCreate,
+          onRemove
+        }}>
+          <BrowserRouter>
+            <div className="App">
+              <Routes>
+                <Route path='/' element={<Login />} />
+                <Route path='/close' element={<RefrigeratorClose />} />
+                <Route path='/open' element={<RefrigeratorOpen />} />
+                <Route path='/edit' element={<Editor />} />
+                <Route path='/community' element={<Community />} />
+                <Route path='/mypage' element={<Mypage />} />
+                <Route path='/join' element={<Join />} />
+              </Routes>
+            </div>
+          </BrowserRouter>
+        </DiaryDispatchContext.Provider>
+    </DiaryStateContext.Provider>
+    
 
   );
 }

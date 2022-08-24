@@ -1,3 +1,4 @@
+import React from "react";
 const MyButton = ({ text, type, onClick }) => {
 
     //type이 positive이나 negative 둘 중 하나가 아니면 default로

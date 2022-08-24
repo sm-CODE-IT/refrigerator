@@ -206,8 +206,9 @@ body {
   flex-direction: column;
 }
 
-.submitbtn {
+.MyButton {
   margin-top: 10px;
+  margin-right: 10px;
   background-color: aquamarine;
 
   border: none;
