@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
 body {
-  background-color: #f6f6f6;
+  background-color: white;
   display: flex;
   font-family: "Gowun Dodum";
   /*기본 폰트 설정*/
@@ -22,7 +22,8 @@ body {
   border-radius: 10px;
 
   display: flex;
-  align-items: center;
+  align-items:center;
+  flex-direction: column;
 }
 
 .login_wrapper label {
@@ -36,8 +37,7 @@ body {
 
 .login_wrapper button {
   padding: 5px;
-  width: 90%;
-  margin-left: 5%;
+  margin-top: 10px;
 
   background-color: aquamarine;
 
@@ -52,6 +52,13 @@ body {
   cursor: pointer;
 }
 
+.loginbtn {
+  width: 200px;
+}
+
+.joinbtn {
+  width: 200px;
+}
 
 
 /* Pages/RefrigeratorOpen */
@@ -183,7 +190,34 @@ body {
 
 /*editor*/
 .editor_body {
+
   position: absolute;
-  left: 10%;
-  top: 15%;
+  left: 50%;
+  top: 50%;
+
+  width: 70%;
+  transform: translate(-50%, -50%);
+
+  background-color: rgb(220, 253, 242);
+  padding: 50px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.submitbtn {
+  margin-top: 10px;
+  background-color: aquamarine;
+
+  border: none;
+  border-radius: 10px;
+
+  font-family: "Gowun Dodum";
+  font-size: 15pt;
+  font-weight: bold;
+
+
+  cursor: pointer;
+
 }

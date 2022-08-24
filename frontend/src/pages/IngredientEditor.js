@@ -46,6 +46,7 @@ const Editor = () => {
                     />
 
                 </section>
+                <button className="submitbtn" >저장</button>
             </div>
         </div>
     )

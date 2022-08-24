@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Join from './component/Join';
 import Login from './component/login';
 import Community from './pages/Community';
 import Editor from './pages/IngredientEditor';
@@ -24,6 +25,7 @@ function App() {
           <Route path='/edit' element={<Editor />} />
           <Route path='/community' element={<Community />} />
           <Route path='/mypage' element={<Mypage />} />
+          <Route path='/join' element={<Join />} />
         </Routes>
       </div>
     </BrowserRouter>
